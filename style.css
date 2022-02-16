@@ -1,0 +1,82 @@
+body{
+    font-family: 'Poppins', sans-serif;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: grey;
+    background-image: url(https://source.unsplash.com/random/?weather);
+    background-size: cover;
+    font-size: 120%;
+}
+.card{
+    background-color: #000000d0;
+    color: white;
+    padding: 1em 1.5em;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+    padding-top: 30px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-bar{
+    background-color: #1f1f1fd0;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 3px .2px 3px 15px;
+}
+.search button{
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    height: 2.6em;
+    width: 2.6em;
+    border-radius: 50%;
+    border: none;
+    position: relative;    
+    left: 2px;
+}
+.search button:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+h2.temp{
+    margin: 0;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+}
+.description{
+    text-transform: capitalize;
+}
+.weather.loading{     
+    visibility: hidden;
+    max-height: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    /* hiding content, positioning the loading content in center and inside the box */
+}
+.weather.loading::after{
+    visibility: visible;
+    content: "Loading....";
+    color: white;
+    position: absolute;
+    margin-top: 35px;
+}
