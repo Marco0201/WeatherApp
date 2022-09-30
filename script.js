@@ -1,7 +1,8 @@
-var mykey = '10962ce66689aef9af882f3619ac6650'
+import WEATHER_API_KEY from "./apikey.js"
+
 
 let weather = {
-    apiKey: mykey,//input your own api key here from openweathermap
+    apiKey: WEATHER_API_KEY,//input your own api key here from openweathermap
     getweather: function (city) {
         fetch("https://api.openweathermap.org/data/2.5/weather?q="
             + city
