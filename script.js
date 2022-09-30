@@ -1,4 +1,4 @@
-var mykey = config.MY_KEY
+var mykey = '10962ce66689aef9af882f3619ac6650'
 
 let weather = {
     apiKey: mykey,//input your own api key here from openweathermap
