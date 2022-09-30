@@ -1,5 +1,7 @@
+var mykey = config.MY_KEY
+
 let weather = {
-    apiKey: "000000000000000",//input your own api key here from openweathermap
+    apiKey: mykey,//input your own api key here from openweathermap
     getweather: function (city) {
         fetch("https://api.openweathermap.org/data/2.5/weather?q="
             + city
@@ -22,7 +24,7 @@ let weather = {
         document.querySelector(".humidity").innerText = "Humidity: " + Math.trunc(humidity) + "%";
         document.querySelector(".speed").innerText = "Wind Speed: " + speed + " km/h";
         document.querySelector(".weather").classList.remove("loading"); // hides the content until you search for a city
-        document.body.style.backgroundImage = "url('https://source.unsplash.com/random/?" + name + "')" //takes img url and inserts the city(name), same as the search bar
+        document.body.style.backgroundImage = "url('https://source.unsplash.com/random/?" + description + "')" //takes img url and inserts the city(name), same as the search bar
     },
     search: function () {
         this.getweather(document.querySelector(".search-bar").value) //this gets the content (value) inside the search bar and returns into the getweather function
